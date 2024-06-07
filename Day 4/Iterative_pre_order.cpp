@@ -13,28 +13,7 @@ class Solution {
 public:
 
     vector<int> preorderTraversal(TreeNode* root) {
-         
-        /* Using Recursion
-        vector<int>pre;
-
-        preOrder(root,pre);
-
-        return pre;
-    
-    }
-
-    private:
-    void preOrder(TreeNode *root, vector<int> &v)
-{
- vector<int>pre;
-        if(root==NULL)
-        return ;
-
-        v.push_back(root->val);
-        preOrder(root->left,v);
-        preOrder(root->right,v); */
         
-
         //Iterative Traversal
         vector<int>preorder;
         if(root==NULL)
