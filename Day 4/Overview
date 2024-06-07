@@ -1,0 +1,4 @@
+Today I solved 3 questions on Trees
+1. Level Order Traversal : using queue and vector of vector
+2. Iterative Pre Order Traversal : using stack
+3. Iterative Inorder Traversal  : using stakc
