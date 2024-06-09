@@ -1,26 +1,39 @@
-vector<int>postorder;
+//----------Iterative Traversal using one stack------
+void postOrder(TreeNode *root, vector<int> &vec)
+    {
+        vector<int>postorder;
         if(root==NULL)
         return postorder;
 
-        stack<TreeNode *> st1, st2;
-        st1.push(root);
+        stack<TreeNode *> st;
+        TreeNode *cur = root;
 
-        while(!st1.empty())
+        while(cur!=NULL || !st.empty())
         {
-            root = st1.top();
-            st1.pop();
-            st2.push(root);
+            if(cur!=NULL)
+            {
+            st.push(cur);
+            cur=cur->left;
+            }
 
-            if(root->left != NULL) st1.push(root->left);
-            
-            if(root->right !=NULL) st1.push(root->right);
+            else{
+                TreeNode *temp = st.top()->right;
+                if(temp==NULL)
+                {
+                    temp = st.top();
+                    st.pop();
+                    postorder.push_back(temp->val);
 
-        }
-
-        while(!st2.empty())
-        {
-            TreeNode * node = st2.top();
-            st2.pop();
-            postorder.push_back(node->val);
+                    while(!st.empty() && temp==st.top()->right)
+                    {
+                        temp=st.top();
+                        st.pop();
+                        postorder.push_back(temp->val);
+                    }
+                }
+                else
+                cur=temp;
+            }
         }
         return postorder;
+    }
