@@ -1,3 +1,5 @@
+void postOrder(TreeNode *root, vector<int> &vec)
+    {
 vector<int>postorder;
         if(root==NULL)
         return postorder;
@@ -24,3 +26,4 @@ vector<int>postorder;
             postorder.push_back(node->val);
         }
         return postorder;
+}
