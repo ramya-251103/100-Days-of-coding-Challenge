@@ -1,0 +1,6 @@
+Tackled two ways of finding Diameter of a Binary Tree
+One having Brute force approach of going to every node and checking lh and rh side and sum them up and compare the sum with every node's lh+rh.
+This approach can have two types of complexity one is O(N) if we use to recursive functions one of finding height and other of finding diameter.
+
+The optimal and O(N) approach can be done by calculation height and diameter simultaneosly. This can be done by calculating height of every node and comparing the diameter that is 
+lh+rh of every node at the same time. The worst TC can goes to O(N) even for skew case.
