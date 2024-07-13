@@ -1,0 +1,4 @@
+Solved Majority Element Ques on leetcode in which I have to return element that appeared more than N/2 time
+* Solved with brute approach first with O(n^2) complexity using two loops
+* Then used hashmap as a better approach with O(NlogN + N) approach
+* Solved using Moore Voting Algorithm with O(N) TC
